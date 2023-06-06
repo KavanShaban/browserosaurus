@@ -37,7 +37,8 @@ async function getIconDataURI(file: string, size: number): Promise<string> {
       console.log(`Error reading ${file}`)
     }
 
-    throw error
+    // throw error
+    return ''
   }
 }
 

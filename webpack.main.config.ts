@@ -5,7 +5,7 @@ import rules from './webpack.rules'
 
 export const mainConfig: Configuration = {
   // Do not create source maps
-  devtool: false,
+  devtool: 'source-map',
   /**
    * This is the main entry point for your application, it's the first file
    * that runs in the main process.

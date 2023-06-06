@@ -3,8 +3,8 @@ import path from 'node:path'
 
 import { sleep } from 'tings'
 
-import type { AppName } from '../../config/apps'
-import { apps } from '../../config/apps'
+import type { App, AppName } from '../../config/apps'
+import { apps, augmentApps } from '../../config/apps'
 import { retrievedInstalledApps, startedScanning } from '../state/actions'
 import { dispatch } from '../state/store'
 
@@ -24,6 +24,48 @@ async function getInstalledAppNames(): Promise<void> {
   dispatch(startedScanning())
 
   const allInstalledAppNames = getAllInstalledAppNames()
+
+  const checkThisAllInstalledAppNames = allInstalledAppNames.map((x) => ({
+    checkThisName: x,
+    checkThisNameLower: x.toLowerCase(),
+  }))
+
+  const augmentedApps: Record<string, App> = {}
+
+  for (const installedApp of checkThisAllInstalledAppNames) {
+    if (installedApp.checkThisNameLower.startsWith('chrome=')) {
+      augmentedApps[installedApp.checkThisName] = {
+        ...apps['Google Chrome'],
+      }
+    }
+  }
+
+  const augmentedAppsKeys = Object.keys(augmentedApps)
+
+  console.log(
+    `Found ${augmentedAppsKeys.length} augmented apps: ${augmentedAppsKeys.join(
+      ', ',
+    )}`,
+  )
+
+  augmentApps(augmentedApps)
+
+  // const { appKeys, appsArray } = appsInfo;
+
+  // for (const appDef of appsArray) {
+  //   const { key, keyLower, appMatcher } = appDef;
+  //   const appPathExists = allInstalledAppNames.includes(appPath);
+  //   let matched = false;
+  //   if (appMatcher) {
+  //     matched = checkThisAllInstalledAppNamesappMatcher({ allInstalledAppNames });
+  //   }
+  // }
+
+  // const installedApps: typeof appKeys = [];
+  // for (const appKey of appKeys) {
+  //   const appDef = apps[appKey];
+
+  // }
 
   const installedApps = Object.keys(apps).filter((appName) =>
     allInstalledAppNames.includes(appName),

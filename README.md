@@ -12,7 +12,7 @@ opening the link with.
 
 ## Installation
 
-Download Browserosaurus from the
+Download Browserosaurus from the  
 [GitHub releases page](https://github.com/will-stone/browserosaurus/releases/latest).
 Select **x64** for Intel machines, or **arm64** for Apple Silicon (M1) machines.
 

@@ -1,11 +1,12 @@
 type App = {
   privateArg?: string
   convertUrl?: (url: string) => string
+  // appMatcher?: ({ }: { appDefName: string, appDefNameLower: string, checkThisName: string, checkThisNameLower: string }) => boolean;
 }
 
 const typeApps = <T extends Record<string, App>>(apps: T) => apps
 
-const apps = typeApps({
+const appsStatic = typeApps({
   'Arc': {},
   'Blisk': {},
   'Brave Browser': {
@@ -134,8 +135,49 @@ const apps = typeApps({
   'zoom.us': {},
 })
 
+export type StringKeys<KKeys extends PropertyKey> = KKeys extends string
+  ? KKeys
+  : never
+export type StringKeysOf<T> = StringKeys<keyof T>
+
+function setupApps<T extends Record<string, App>>(appsExtra: T) {
+  const appKeys: StringKeys<keyof typeof appsExtra>[] = Object.keys(
+    appsExtra,
+  ) as any
+
+  const appsArray = appKeys.map((appKey) => {
+    const appDef: App = appsExtra[appKey]
+    return {
+      key: appKey,
+      keyLower: appKey.toLowerCase(),
+      ...appDef,
+    } as const
+  })
+
+  return {
+    apps: appsExtra,
+    appsInfo: {
+      appKeys,
+      appsArray,
+    },
+  }
+}
+
+let { apps, appsInfo } = setupApps(appsStatic)
+
+function augmentApps<T extends Record<string, App>>(appsExtra: T) {
+  const res = setupApps({
+    ...appsStatic,
+    ...appsExtra,
+  })
+
+  apps = res.apps
+  appsInfo = res.appsInfo as any
+  return res
+}
+
 type Apps = typeof apps
 
 type AppName = keyof typeof apps
 
-export { AppName, Apps, apps }
+export { App, AppName, Apps, apps, appsInfo, augmentApps }
