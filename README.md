@@ -13,7 +13,7 @@ opening the link with.
 ## Installation
 
 Download Browserosaurus from the  
-[GitHub releases page](https://github.com/will-stone/browserosaurus/releases/latest).
+[GitHub releases page](https://github.com/KavanShaban/browserosaurus/releases/latest).
 Select **x64** for Intel machines, or **arm64** for Apple Silicon (M1) machines.
 
 Or use [Homebrew](https://formulae.brew.sh/cask/browserosaurus#default). Thank
@@ -31,9 +31,9 @@ brew install --cask browserosaurus
 ## Help
 
 Found a bug? Please log an
-[issue](https://github.com/will-stone/browserosaurus/issues). For anything else,
-please see the documentation below or open a
-[discussion](https://github.com/will-stone/browserosaurus/discussions).
+[issue](https://github.com/KavanShaban/browserosaurus/issues). For anything
+else, please see the documentation below or open a
+[discussion](https://github.com/KavanShaban/browserosaurus/discussions).
 
 ## Notable Forks
 
@@ -50,8 +50,8 @@ forks of this project that you may like to consider:
 
 ## Documentation
 
-- [Changelog](https://github.com/will-stone/browserosaurus/releases)
-- [Help](https://github.com/will-stone/browserosaurus/discussions/categories/q-a)
+- [Changelog](https://github.com/KavanShaban/browserosaurus/releases)
+- [Help](https://github.com/KavanShaban/browserosaurus/discussions/categories/q-a)
 - [Supporting a new browser or app](guide/supporting-a-browser-or-app.md)
 - [Setting up for development](guide/setting-up-for-development.md)
 - [Privacy policy](guide/privacy.md)

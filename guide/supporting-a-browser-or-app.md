@@ -7,9 +7,9 @@ document you can add the browser yourself and submit it to be included in
 Browserosaurus. Don't worry, even if you've never contributed to an open source
 project before, I'll take you through the steps of how to add support for a new
 browser, and if something is confusing or you'd like a little extra help, please
-[ask on the discussions forum](https://github.com/will-stone/browserosaurus/discussions/categories/q-a),
+[ask on the discussions forum](https://github.com/KavanShaban/browserosaurus/discussions/categories/q-a),
 or even send a
-[pull request](https://github.com/will-stone/browserosaurus/pulls) to improve
+[pull request](https://github.com/KavanShaban/browserosaurus/pulls) to improve
 this documentation.
 
 > 🚨 Any apps that receive an issue and are not fixed via a pull request, will
@@ -90,9 +90,9 @@ discuss it on the pull request page.
 ## Submit your changes
 
 Commit and push your changes to your GitHub fork of Browserosaurus, then open a
-[pull request](https://github.com/will-stone/browserosaurus/pulls) to merge your
-branch into Browserosaurus' `main` branch. Please note that this repository now
-follows the
+[pull request](https://github.com/KavanShaban/browserosaurus/pulls) to merge
+your branch into Browserosaurus' `main` branch. Please note that this repository
+now follows the
 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) standard,
 and so please structure your commit messages accordingly. The example above's
 commit message could look something like this:
