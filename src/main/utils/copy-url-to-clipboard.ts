@@ -6,7 +6,7 @@ const copyUrlToClipboard = (string: string): boolean => {
     new Notification({
       body: 'URL copied to clipboard',
       silent: true,
-      title: 'Browserosaurus',
+      title: 'R80 Browser Prompter',
     }).show()
     return true
   }

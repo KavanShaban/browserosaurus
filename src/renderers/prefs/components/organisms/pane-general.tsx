@@ -54,7 +54,7 @@ export const GeneralPane = (): JSX.Element => {
         <Left>Default web browser:</Left>
         <Right>
           {isDefaultProtocolClient ? (
-            'Browserosaurus is the default web browser'
+            'R80 Browser Prompter is the default web browser'
           ) : (
             <Button
               onClick={() => dispatch(clickedSetAsDefaultBrowserButton())}
@@ -63,10 +63,10 @@ export const GeneralPane = (): JSX.Element => {
             </Button>
           )}
           <p className="mt-2 text-sm opacity-70">
-            Setting Browserosaurus as your default web browser means links
+            Setting R80 Browser Prompter as your default web browser means links
             clicked outside of web browsers will open the picker window. This is
-            the primary design of Browserosaurus. However, you can also
-            programmatically send URLs to Browserosaurus.
+            the primary design of R80 Browser Prompter. However, you can also
+            programmatically send URLs to R80 Browser Prompter.
           </p>
         </Right>
       </Row>
@@ -77,7 +77,8 @@ export const GeneralPane = (): JSX.Element => {
           <Button onClick={() => dispatch(clickedRescanApps())}>Rescan</Button>
           <p className="mt-2 text-sm opacity-70">
             {numberOfInstalledApps} compatible apps found. Rescan if you have
-            added or removed a compatible app whilst Browserosaurus is running.
+            added or removed a compatible app whilst R80 Browser Prompter is
+            running.
           </p>
         </Right>
       </Row>

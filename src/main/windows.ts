@@ -82,7 +82,7 @@ async function createWindows(): Promise<void> {
     movable: false,
     resizable: true,
     show: false,
-    title: 'Browserosaurus',
+    title: 'R80 Browser Prompter',
     titleBarStyle: 'hidden',
     transparent: true,
     vibrancy: 'popover',

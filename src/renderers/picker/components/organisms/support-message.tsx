@@ -17,10 +17,7 @@ const SupportMessage = (): JSX.Element => {
       )}
     >
       <div className="p-4">
-        <p>
-          Thank you for downloading Browserosaurus. Please consider supporting
-          my open source projects.
-        </p>
+        <p>Thank you for downloading R80 Browser Prompter.</p>
 
         <p>
           Thank you <span aria-label="kiss emoji">&#128536;</span> — Will.

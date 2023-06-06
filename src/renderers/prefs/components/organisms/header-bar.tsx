@@ -45,7 +45,7 @@ export const HeaderBar = ({ className }: HeaderBarProps): JSX.Element => {
       )}
     >
       <div className="flex h-8 items-center justify-center pb-8 pt-4 draggable">
-        Browserosaurus Preferences
+        R80 Browser Prompter Preferences
       </div>
       <div className="flex items-center justify-center space-x-12">
         <TabButton tab="general">General</TabButton>

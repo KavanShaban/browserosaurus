@@ -8,7 +8,8 @@ import { rendererConfig } from './webpack.renderer.config'
 const config: ForgeConfig = {
   makers: [new MakerZIP({}, ['darwin'])],
   packagerConfig: {
-    appBundleId: 'com.browserosaurus',
+    // appBundleId: 'com.browserosaurus',
+    appBundleId: 'com.r80.browser-prompter',
     appCategoryType: 'public.app-category.developer-tools',
     asar: false,
     extendInfo: 'plist/Info.plist',
