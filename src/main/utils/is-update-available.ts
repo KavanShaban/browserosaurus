@@ -1,16 +1,17 @@
-import axios from 'axios'
+// import axios from 'axios'
 
-import { getUpdateUrl } from './get-update-url'
+// import { getUpdateUrl } from './get-update-url'
 
-export async function isUpdateAvailable(): Promise<boolean> {
-  let isNewVersionAvailable = false
+// export async function isUpdateAvailable(): Promise<boolean> {
+export function isUpdateAvailable(): Promise<boolean> {
+  const isNewVersionAvailable = false
 
-  try {
-    const { data } = await axios(getUpdateUrl())
-    isNewVersionAvailable = Boolean(data)
-  } catch {
-    isNewVersionAvailable = false
-  }
+  // try {
+  //   const { data } = await axios(getUpdateUrl())
+  //   isNewVersionAvailable = Boolean(data)
+  // } catch {
+  //   isNewVersionAvailable = false
+  // }
 
-  return isNewVersionAvailable
+  return Promise.resolve(isNewVersionAvailable)
 }
