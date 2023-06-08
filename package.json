@@ -1,6 +1,6 @@
 {
   "name": "r80-browser-prompter",
-  "version": "20.3.1",
+  "version": "21.0.0",
   "description": "The browser prompter for macOS",
   "keywords": [
     "macOS",
@@ -16,6 +16,9 @@
   "author": "Kavan Shaban",
   "main": ".webpack/main",
   "scripts": {
+    "clean": "npx --yes rimraf .webpack",
+    "clean_all": "npm run clean & npm run clean_node",
+    "clean_node": "npx --yes rimraf node_modules package-lock.json",
     "doctor": "npm run lint && npm run typecheck && npm run test",
     "icns": "cd ./src/shared/static/icon && ../../../../scripts/png2icns.sh icon.png",
     "lint": "eslint . --ignore-path .gitignore --ext .js,.jsx,.cjs,.mjs,.ts,.tsx",
